@@ -67,7 +67,10 @@ Find the file `coords_flash_voxel.vtk` which is the above listed vtk format coor
 ```c3d_affine_tool -sform INDD119454L_FLASH_combined_average_reoriented_cleared_norm_0000.nii.gz -o sform_warp_image.mat```
 (Note that the `warp.nii.gz` image and the flash image has the same `sform` matrix)
 
-```warpmesh -w ants coords_flash_voxel.vtk flash_input_world_coords.vtk sform_warp_image.mat```
+***DEPRECATED COMMAND*** ```warpmesh -w ants coords_flash_voxel.vtk flash_input_world_coords.vtk sform_warp_image.mat```
+
+***UPDATE*** Use the following command instead of the above `warpmesh`:
+```greedy -d 3 -rf INDD119454L_FLASH_combined_average_reoriented_cleared_norm_0000.nii.gz -rs coords_flash_voxel.vtk flash_input_world_coords.vtk -r sform_warp_image.mat```
 
 #### Step 4: Apply the warp and affine matrix to bring the world cooordinates from flash to T2w AC/PC space
 
