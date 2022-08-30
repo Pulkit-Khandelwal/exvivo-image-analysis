@@ -14,6 +14,8 @@ https://upenn.box.com/s/1cc00mjrp35c6nki5ojjmwk481xaiwqb
 - `flash_to_t2_mask.mat`: This was provided by Sandy and is essentially an affine transformation matrix between t2 to flash registration.
 - `warp.nii.gz`: I then used `flash_to_t2_mask.mat` to get do a quick deformable registration and obtained `warp.nii.gz` as follows:
 
+***NOTE*** We do not need to perform the deformable registration step and thereby we don't have use the `warp.nii.gz` file as such.
+
 ```
 ./greedy -d 3 \
     -m NMI \
@@ -62,7 +64,8 @@ Find the file `coords_flash_voxel.vtk` which is the above listed vtk format coor
 
 #### Step 3: Get world cooordinates
 
-```c3d_affine_tool -sform warp.nii.gz -o sform_warp_image.mat```
+```c3d_affine_tool -sform INDD119454L_FLASH_combined_average_reoriented_cleared_norm_0000.nii.gz -o sform_warp_image.mat```
+(Note that the `warp.nii.gz` image and the flash image has the same `sform` matrix)
 
 ```warpmesh -w ants coords_flash_voxel.vtk flash_input_world_coords.vtk sform_warp_image.mat```
 
