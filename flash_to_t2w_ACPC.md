@@ -89,7 +89,7 @@ POINTS 4 float
 219.856 242.573 346.45 
 ```
 
-#### The voxel coordinates in the T2w Ac/PC space looks like:
+#### The voxel coordinates in the T2w AC/PC space looks like:
 
 ```
 Motor: 378, 189, 551
