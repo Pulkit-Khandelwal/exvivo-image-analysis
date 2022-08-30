@@ -10,7 +10,6 @@ https://upenn.box.com/s/1cc00mjrp35c6nki5ojjmwk481xaiwqb
 - The T2w image in the AC/PC orientation: `119454L_reslice_v2_cleared_norm.nii.gz`
 - `greedy`: Use the binary which I provide in the box folder
 - `c3d_affine_tool`: This comes with c3d from itk-snap
-- `warpmesh`
 - `flash_to_t2_mask.mat`: This was provided by Sandy and is essentially an affine transformation matrix between t2 to flash registration.
 - `warp.nii.gz`: I then used `flash_to_t2_mask.mat` to get do a quick deformable registration and obtained `warp.nii.gz` as follows:
 
@@ -66,10 +65,6 @@ Find the file `coords_flash_voxel.vtk` which is the above listed vtk format coor
 
 ```c3d_affine_tool -sform INDD119454L_FLASH_combined_average_reoriented_cleared_norm_0000.nii.gz -o sform_warp_image.mat```
 (Note that the `warp.nii.gz` image and the flash image has the same `sform` matrix)
-
-***DEPRECATED COMMAND*** ```warpmesh -w ants coords_flash_voxel.vtk flash_input_world_coords.vtk sform_warp_image.mat```
-
-***UPDATE*** Use the following command instead of the above `warpmesh`:
 
 ```greedy -d 3 -rf INDD119454L_FLASH_combined_average_reoriented_cleared_norm_0000.nii.gz -rs coords_flash_voxel.vtk flash_input_world_coords.vtk -r sform_warp_image.mat```
 
