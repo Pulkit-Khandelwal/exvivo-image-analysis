@@ -3,7 +3,7 @@
 
 #### Let's follow an example use case for the case `INDD119454L` to understand what is needed and the steps required to the same. The script was tested on a Macbook.
 #### All files to reproduce the trasformation are at this box link:
-
+https://upenn.box.com/s/1cc00mjrp35c6nki5ojjmwk481xaiwqb
 
 #### Requirements:
 - The FLASH image where the voxel coordinates are listed: `INDD119454L_FLASH_combined_average_reoriented_cleared_norm_0000.nii.gz`
