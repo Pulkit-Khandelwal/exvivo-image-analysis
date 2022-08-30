@@ -61,14 +61,14 @@ POINTS 4 float
 ```
 Find the file `coords_flash_voxel.vtk` which is the above listed vtk format coordinates.
 
-#### Step 3: Get world cooordinates
+#### Step 3: Get world coordinates
 
 ```c3d_affine_tool -sform INDD119454L_FLASH_combined_average_reoriented_cleared_norm_0000.nii.gz -o sform_warp_image.mat```
 (Note that the `warp.nii.gz` image and the flash image has the same `sform` matrix)
 
 ```greedy -d 3 -rf INDD119454L_FLASH_combined_average_reoriented_cleared_norm_0000.nii.gz -rs coords_flash_voxel.vtk flash_input_world_coords.vtk -r sform_warp_image.mat```
 
-#### Step 4: Apply the warp and affine matrix to bring the world cooordinates from flash to T2w AC/PC space
+#### Step 4: Apply the warp and affine matrix to bring the world coordinates from flash to T2w AC/PC space
 
 ```greedy -d 3 -rf INDD119454L_FLASH_combined_average_reoriented_cleared_norm_0000.nii.gz -rs flash_input_world_coords.vtk out_warp_world_fixed.vtk -r flash_to_t2_mask.mat warp.nii.gz```
 
@@ -76,7 +76,7 @@ Find the file `coords_flash_voxel.vtk` which is the above listed vtk format coor
 
 ```c3d_affine_tool -sform 119454L_reslice_v2_cleared_norm.nii.gz -inv -o sform_inverse_moving_image.mat```
 
-#### Step 6: Bring the transformed world cooordinates to the T2w AC/PC space which is the final output
+#### Step 6: Bring the transformed world coordinates to the T2w AC/PC space which is the final output
 
 ```greedy -d 3 -rf INDD119454L_FLASH_combined_average_reoriented_cleared_norm_0000.nii.gz -rs out_warp_world_fixed.vtk voxel_coord_t2w_output.vtk -r sform_inverse_moving_image.mat```
 
