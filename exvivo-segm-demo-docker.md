@@ -43,7 +43,7 @@ Run the following command to start the inference. See how the volume is mounted 
 `docker run --gpus all --privileged -v /data/username/:/data/exvivo/ -it pulks/docker_hippogang_exvivo_segm:v1.1.0 /bin/bash -c "bash /src/commands_nnunet_inference.sh" `
 
 #### Voila! check the output!
-It takes arounf 15-20 minute to run the inference. You should see a folder in your local machine at the path:
+It takes around 15-20 minute to run the inference. You should see a folder in your local machine at the path:
 `/your/path/to/data_for_inference/output_from_nnunet_inference`
 
 ## That's it! It is quite easy!
