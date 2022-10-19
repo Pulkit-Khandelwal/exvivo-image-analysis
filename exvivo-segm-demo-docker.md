@@ -26,7 +26,7 @@ My docker image is located at `https://hub.docker.com/r/pulks/docker_hippogang_e
 # Docker files:
 I have provided some files in the folder `docker_files` for your reference only but we do not need those for running the demo.
 
-
+# Steps:
 #### Step 0: Login to you lambda machine and open a new tmux session on lambda machine
 `tmux new -s docker_trial`
 
