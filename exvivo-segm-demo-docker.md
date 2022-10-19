@@ -5,6 +5,11 @@
 ##### Version bare-bones: `docker_hippogang_exvivo_segm:v1.1.0`
 ##### Last Updated: 10/19/22
 
+![Alt Text](https://github.com/Pulkit-Khandelwal/exvivo-commands/blob/main/files/img.gif)
+![Alt Text](https://github.com/Pulkit-Khandelwal/exvivo-commands/blob/main/files/segm.gif)
+
+
+
 # Some useful things:
 - You don't need any working knowledge of docker or kubernetes, but if curious, here is a great [YouTube video](https://youtu.be/3c-iBn73dDE).
 - You just need to provide a `nifti` image in the correct file format ending with `_0000.nii.gz`
