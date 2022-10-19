@@ -5,7 +5,7 @@
 ##### Version bare-bones: `docker_hippogang_exvivo_segm:v1.1.0`
 
 # Some useful things:
-- You don't need any working knowledge of docker or kubernetes!
+- You don't need any working knowledge of docker or kubernetes, but if curious, here is a great [YouTube video](https://youtu.be/3c-iBn73dDE).
 - You just need to provide a `nifti` image in the correct file format ending with `_0000.nii.gz`
 - Use a GPU enabled machine. For PICSL and hippogang members, feel free to use any of the lambda machines. I tetsed this on lambda-picsl.
 - You do not need to have a docker hub account but might as well just in case. You can sign up [here](https://hub.docker.com/). It is free!
