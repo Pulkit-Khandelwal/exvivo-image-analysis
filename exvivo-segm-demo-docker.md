@@ -17,6 +17,9 @@ I provide a sample image at the [box](https://upenn.box.com/s/q24zo6enivytnerko2
 # Docker image:
 My docker image is located at `https://hub.docker.com/r/pulks/docker_hippogang_exvivo_segm`
 
+# Docker files:
+I have provided some files in the folder `` for for reference but we do not need those for running the demo.
+
 
 #### Step 0: Login to you lambda machine and open a new tmux session on lambda machine
 `tmux new -s docker_trial`
