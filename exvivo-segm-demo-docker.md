@@ -18,7 +18,7 @@ I provide a sample image at the [box](https://upenn.box.com/s/q24zo6enivytnerko2
 My docker image is located at `https://hub.docker.com/r/pulks/docker_hippogang_exvivo_segm`
 
 # Docker files:
-I have provided some files in the folder `` for for reference but we do not need those for running the demo.
+I have provided some files in the folder `docker_files` for your reference only but we do not need those for running the demo.
 
 
 #### Step 0: Login to you lambda machine and open a new tmux session on lambda machine
@@ -27,5 +27,11 @@ I have provided some files in the folder `` for for reference but we do not need
 #### Step 1: Prepare the data
 Download the image from the box into a folder named `data_for_inference` (do NOT give it any other name) and then place this folder any directory of choice, for example, `/data/username/`.
 
+#### Step 2: Pull the docker image
+This should pull my dockjer image from docker hub. It is around 8GB in size.
+`docker pull pulks/docker_hippogang_exvivo_segm`
 
-#### Step 2: Prepare the data
+#### Step 3: Run the docker container
+Run the following command to start the inference. See how the volume is mounted in the following command. We mount the volume where the folder `data_for_inference`, with the image on which to run inference, is located. Here, `data_for_inference` is located in `/data/username/`. Leave rest of the command as is.
+
+`docker run --gpus all --privileged -v /data/username/:/data/exvivo/ -it pulks/docker_hippogang_exvivo_segm:v1.1.0 "bash /src/commands_nnunet_inference.sh" `
