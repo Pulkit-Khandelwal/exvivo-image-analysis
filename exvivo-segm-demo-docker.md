@@ -1,5 +1,5 @@
 # Hello hello! Welcome to hippogang's ex vivo world!
-## Here, we will quickly run a docker container and get going with parcellating ex vivo 7Tesla MRI of human brain hemisphere. Ofcourse, we will use our favourite nnUNet!
+## Here, we will quickly run a docker container and get going with parcellating ex vivo 7Tesla MRI of human brain hemisphere. Of course, we will use our favourite nnUNet!
 
 #### Author: Pulkit Khandelwal
 ##### Version bare-bones: `docker_hippogang_exvivo_segm:v1.1.0`
