@@ -2,6 +2,7 @@
 ## Here, we will quickly run a docker container and get going with parcellating ex vivo 7Tesla MRI of human brain hemisphere. Ofcourse, we will use our favourite nnUNet!
 
 #### Author: Pulkit Khandelwal
+###### docker_hippogang_exvivo_segm:v1.1.0
 
 # Some useful things:
 - You don't need any working knowledge of docker or kubernetes!
@@ -13,5 +14,8 @@
 # Sample data:
 I provide a sample image at the [box]() lik. Use this image to test this docker container.
 
-#### Step 1: Open a new tmux session on lambda machine
+#### Step 0: Login to you lambda machine and open a new tmux session on lambda machine
 `tmux new -s docker_trial`
+
+#### Step 1: Prepare the data
+Download the image from the box into a folder named `data_for_inference` (do NOT give it any other name) and then place this folder any directory of choice, for example, `/data/username/`.
