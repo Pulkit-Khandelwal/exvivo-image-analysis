@@ -6,7 +6,7 @@
 
 # Some useful things:
 - You don't need any working knowledge of docker or kubernetes!
-- You just need to provide a `nifiti` image in the correct file format ending with `_0000.nii.gz`
+- You just need to provide a `nifti` image in the correct file format ending with `_0000.nii.gz`
 - Use a GPU enabled machine. For PICSL and hippogang members, feel free to use any of the lambda machines. I tetsed this on lambda-picsl.
 - You do not need to have a docker hub account but might as well jsut in case. You can sign up [here](https://hub.docker.com/). It is free!
 - Everything you need is already there on the lambda machine. Though if need be, you might have to be added to the docker user group (ask me or Gaylord).
