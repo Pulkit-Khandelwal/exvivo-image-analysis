@@ -1,4 +1,4 @@
-# Hello hello! Welcome to hippogang's ex vivo world!
+# Welcome to hippogang's ex vivo world!
 ## Here, we will quickly run a docker container and get going with parcellating ex vivo 7Tesla T2w & flash MRI of human brain hemisphere. Of course, we will use our favourite nnUNet!
 
 #### Author: Pulkit Khandelwal
