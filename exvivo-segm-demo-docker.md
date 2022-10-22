@@ -3,7 +3,14 @@
 
 #### Author: Pulkit Khandelwal
 ##### Version bare-bones: `docker_hippogang_exvivo_segm:v1.1.0`
-##### Last Updated: 10/19/22
+
+##### Change Logs
+10/22/22:
+- Version `docker_hippogang_exvivo_segm:v1.2.0` now also performs segmentation for WMH in `in vivo` flair images used for Detre/Sandy's project on ADNI data.
+- You can now also see a `logs.txt` file in the folder where you run the docker container from.
+
+10/19/22:
+- First created!
 
 ![Alt Text](https://github.com/Pulkit-Khandelwal/exvivo-commands/blob/main/files/img.gif)
 ![Alt Text](https://github.com/Pulkit-Khandelwal/exvivo-commands/blob/main/files/segm.gif)
@@ -39,7 +46,10 @@ This should pull my dockjer image from docker hub. It is around 8GB in size.
 #### Step 3: Run the docker container
 Run the following command to start the inference. See how the volume is mounted in the following command. We mount the volume where the folder `data_for_inference`, with the image on which to run inference, is located. Here, `data_for_inference` is located in `/data/username/`. Leave the rest of the command as is.
 
-`docker run --gpus all --privileged -v /data/username/:/data/exvivo/ -it pulks/docker_hippogang_exvivo_segm:v1.1.0 /bin/bash -c "bash /src/commands_nnunet_inference.sh"`
+`docker run --gpus all --privileged -v /data/username/:/data/exvivo/ -it pulks/docker_hippogang_exvivo_segm:v1.1.0 /bin/bash -c "bash /src/commands_nnunet_inference.sh" >> logs.txt`
+
+If, you want to run the WMH for `in vivo` flair data then run the following command:
+`docker run --gpus all --privileged -v /data/username/:/data/exvivo/ -it pulks/docker_hippogang_exvivo_segm:v1.1.0 /bin/bash -c "bash /src/docker_stuff/commands_nnunet_inference_WMH_invivo.sh" >> logs.txt`
 
 #### Voila! check the output!
 It takes around 15-20 minutes to run the inference. You should see a folder in your local machine at the path:
