@@ -6,7 +6,7 @@
 
 ##### Change Logs
 10/22/22:
-- - Version `docker_hippogang_exvivo_segm:v1.3.0` sgements even the white matter automatically now!
+- Version `docker_hippogang_exvivo_segm:v1.3.0` sgements even the white matter automatically now!
 - Version `docker_hippogang_exvivo_segm:v1.2.0` now also performs segmentation for WMH in `in vivo` flair images used for Detre/Sandy's project on ADNI data.
 - You can now also see a `logs.txt` file in the folder where you run the docker container from.
 
