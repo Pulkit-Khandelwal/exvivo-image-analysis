@@ -50,7 +50,7 @@ Run the following command to start the inference. See how the volume is mounted 
 `docker run --gpus all --privileged -v /data/username/:/data/exvivo/ -it pulks/docker_hippogang_exvivo_segm:v1.3.0 /bin/bash -c "bash /src/commands_nnunet_inference.sh" >> logs.txt`
 
 If, you want to run the WMH for `in vivo` flair data then run the following command:
-`docker run --gpus all --privileged -v /data/username/:/data/exvivo/ -it pulks/docker_hippogang_exvivo_segm:v1.3.0 /bin/bash -c "bash /src/docker_stuff/commands_nnunet_inference_WMH_invivo.sh" >> logs.txt`
+`docker run --gpus all --privileged -v /data/username/:/data/exvivo/ -it pulks/docker_hippogang_exvivo_segm:v1.3.0 /bin/bash -c "bash /src/commands_nnunet_inference_WMH_invivo.sh" >> logs.txt`
 
 #### Voila! check the output!
 It takes around 15-20 minutes to run the inference. You should see a folder in your local machine at the path:
