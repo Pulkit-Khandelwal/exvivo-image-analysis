@@ -42,7 +42,7 @@ Download the image from the box into a folder named `data_for_inference` (do NOT
 
 #### Step 2: Pull the docker image
 This should pull my dockjer image from docker hub. It is around 8GB in size.
-`docker pull pulks/docker_hippogang_exvivo_segm`
+`docker pull pulks/docker_hippogang_exvivo_segm:v1.3.0`
 
 #### Step 3: Run the docker container
 Run the following command to start the inference. See how the volume is mounted in the following command. We mount the volume where the folder `data_for_inference`, with the image on which to run inference, is located. Here, `data_for_inference` is located in `/data/username/`. Leave the rest of the command as is.
